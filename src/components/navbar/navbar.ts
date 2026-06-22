@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 
 interface NavItem {
@@ -7,7 +8,9 @@ interface NavItem {
 }
 
 @Component({
+  standalone: true,
   selector: 'app-navbar',
+  imports: [CommonModule],
   templateUrl: './navbar.html',
   styleUrls: ['./navbar.css']
 })
