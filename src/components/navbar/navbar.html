@@ -1,56 +1,25 @@
-<nav class="navbar" [class.scrolled]="isScrolled">
+<nav class="navbar">
 
-    <div class="navbar-container">
+    <div class="navbar__logo">LOGO</div>
 
-        <div class="logo-section">
+    <div class="navbar__links">
 
-            <div class="logo-placeholder">
-
-                <svg viewBox="0 0 36 36" width="40" height="40">
-
-                    <path d="M18 2 L34 18 L18 34 L2 18 Z" fill="#4274D9" />
-
-                    <path d="M18 8 L28 18 L18 28 L8 18 Z" fill="#293681" />
-
-                    <path d="M18 13 L23 18 L18 23 L13 18 Z" fill="#95CCDD" />
-
-                </svg>
-
-            </div>
-
-            <div class="logo-text">
-
-                <span class="company-name">
-                    BUSINESS
-                </span>
-
-                <span class="company-slogan">
-                    Excellence & Solutions
-                </span>
-
-            </div>
-
-        </div>
-
-
-        <div class="nav-links">
-
-            <button *ngFor="let link of navLinks" (click)="scrollToSection(link.fragment)" class="nav-link">
-
-                {{ link.label }}
-
-            </button>
-
-        </div>
-
-        <button class="login-btn" (click)="login()">
-
-            Connexion
-
+        <button *ngFor="let item of navItems" (click)="scrollToSection(item.target)">
+            {{ item.label }}
         </button>
 
     </div>
 
-    <div class="accent-line"></div>
+    <button class="navbar__login" (click)="login()">Connexion</button>
+
+    <button class="navbar__hamburger" (click)="toggleMenu()">☰</button>
 
 </nav>
+
+<div class="mobile-drawer" [class.mobile-drawer--open]="mobileMenuOpen">
+
+    <button *ngFor="let item of navItems" (click)="scrollToSection(item.target)">{{ item.label }}</button>
+
+    <button class="drawer-login" (click)="login()">Connexion</button>
+
+</div>
