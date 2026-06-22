@@ -7,13 +7,13 @@
 .section-header {
   text-align: center;
 
-  margin-bottom: 60px;
+  margin-bottom: 70px;
 }
 
 .section-header h2 {
   color: #293681;
 
-  font-size: 2.5rem;
+  font-size: 2.7rem;
 
   font-weight: 700;
 
@@ -28,7 +28,7 @@
 
   background-color: #4274d9;
 
-  border-radius: 10px;
+  border-radius: 20px;
 }
 
 .about-content {
@@ -38,7 +38,9 @@
 
   justify-content: center;
 
-  gap: 60px;
+  gap: 80px;
+
+  margin-bottom: 70px;
 }
 
 .about-logo {
@@ -52,7 +54,7 @@
 .about-logo img {
   width: 100%;
 
-  max-width: 380px;
+  max-width: 350px;
 
   height: auto;
 
@@ -68,7 +70,7 @@
 
   font-size: 2rem;
 
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .about-text p {
@@ -83,10 +85,66 @@
   text-align: justify;
 }
 
+.about-stats {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 30px;
+
+  flex-wrap: wrap;
+}
+
+.stat-card {
+  width: 280px;
+
+  min-height: 100px;
+
+  background-color: #d0e7e6;
+
+  border-radius: 16px;
+
+  padding: 25px;
+
+  text-align: center;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow: 0 10px 25px rgba(41, 54, 129, 0.15);
+}
+
+.stat-number {
+  color: #293681;
+
+  font-size: 1.8rem;
+
+  font-weight: 700;
+
+  margin-bottom: 15px;
+}
+
+.stat-title {
+  color: #333;
+
+  font-size: 1rem;
+
+  line-height: 1.6;
+}
+
 @media screen and (max-width: 992px) {
   .about-content {
     flex-direction: column;
 
+    gap: 50px;
+  }
+
+  .about-text {
     text-align: center;
   }
 
@@ -95,7 +153,7 @@
   }
 
   .about-logo img {
-    max-width: 300px;
+    max-width: 280px;
   }
 }
 
@@ -112,7 +170,7 @@
     font-size: 1.6rem;
   }
 
-  .about-text p {
-    font-size: 1rem;
+  .stat-card {
+    width: 100%;
   }
 }
