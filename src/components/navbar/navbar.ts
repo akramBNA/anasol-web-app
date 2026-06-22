@@ -8,21 +8,20 @@ interface NavItem {
 }
 
 @Component({
-  standalone: true,
   selector: 'app-navbar',
+  standalone: true,
   imports: [CommonModule],
   templateUrl: './navbar.html',
-  styleUrls: ['./navbar.css']
+  styleUrls: ['./navbar.css'],
 })
 export class Navbar {
-
   mobileMenuOpen = false;
 
   navItems: NavItem[] = [
     { label: 'Qui sommes-nous', target: 'about' },
     { label: 'Activités', target: 'activities' },
     { label: 'Projets', target: 'projects' },
-    { label: 'Contactez-nous', target: 'contact' }
+    { label: 'Contactez-nous', target: 'contact' },
   ];
 
   constructor(private router: Router) {}
@@ -36,15 +35,14 @@ export class Navbar {
   }
 
   scrollToSection(sectionId: string): void {
-
     this.closeMenu();
 
     const section = document.getElementById(sectionId);
 
-    if(section){
+    if (section) {
       section.scrollIntoView({
         behavior: 'smooth',
-        block: 'start'
+        block: 'start',
       });
     }
   }
