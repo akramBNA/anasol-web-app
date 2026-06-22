@@ -1,1 +1,69 @@
-<p>navbar works!</p>
+<nav class="navbar" [class.scrolled]="isScrolled">
+
+    <div class="navbar-container">
+
+        <div class="logo-section">
+
+            <div class="logo-placeholder">
+
+                <svg viewBox="0 0 36 36" width="40" height="40">
+
+                    <path
+                        d="M18 2 L34 18 L18 34 L2 18 Z"
+                        fill="#4274D9" />
+
+                    <path
+                        d="M18 8 L28 18 L18 28 L8 18 Z"
+                        fill="#293681" />
+
+                    <path
+                        d="M18 13 L23 18 L18 23 L13 18 Z"
+                        fill="#95CCDD" />
+
+                </svg>
+
+            </div>
+
+            <div class="logo-text">
+
+                <span class="company-name">
+                    BUSINESS
+                </span>
+
+                <span class="company-slogan">
+                    Excellence & Solutions
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="nav-links">
+
+            <button
+                *ngFor="let link of navLinks"
+                (click)="scrollToSection(link.fragment)"
+                class="nav-link">
+
+                {{ link.label }}
+
+            </button>
+
+        </div>
+
+        <!-- Login -->
+
+        <button
+            class="login-btn"
+            (click)="login()">
+
+            Connexion
+
+        </button>
+
+    </div>
+
+    <div class="accent-line"></div>
+
+</nav>

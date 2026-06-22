@@ -1,9 +1,10 @@
+import { CommonModule } from '@angular/common';
 import { Component, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './navbar.html',
   styleUrl: './navbar.css',
 })
@@ -16,7 +17,7 @@ export class Navbar {
     { label: 'Qui sommes nous', fragment: 'about' },
     { label: 'Activités', fragment: 'activities' },
     { label: 'Projets', fragment: 'projects' },
-    { label: 'Contactez nous', fragment: 'contact' }
+    { label: 'Contactez nous', fragment: 'contact' },
   ];
 
   @HostListener('window:scroll')
@@ -30,7 +31,7 @@ export class Navbar {
     if (element) {
       element.scrollIntoView({
         behavior: 'smooth',
-        block: 'start'
+        block: 'start',
       });
     }
   }
@@ -39,4 +40,3 @@ export class Navbar {
     this.router.navigate(['/login']);
   }
 }
-
