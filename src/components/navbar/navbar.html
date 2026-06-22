@@ -1,20 +1,19 @@
 <nav class="navbar">
-
     <div class="navbar-container">
-
-        <div class="navbar__logo">LOGO</div>
-
-        <div class="navbar__links">
+        <div class="navbar-logo">LOGO</div>
+        <div class="navbar-links">
             <button *ngFor="let item of navItems" (click)="scrollToSection(item.target)">{{ item.label }}</button>
         </div>
-
-        <button class="navbar__login" (click)="login()">Connexion</button>
-        <button class="navbar__hamburger" (click)="toggleMenu()">☰</button>
+        <button class="login-btn" (click)="login()">Connexion</button>
+        <button class="hamburger-btn" (click)="toggleMenu()">☰</button>
     </div>
-
 </nav>
 
-<div class="mobile-drawer" [class.mobile-drawer--open]="mobileMenuOpen">
+@if(mobileMenuOpen){
+
+<div class="mobile-drawer">
     <button *ngFor="let item of navItems" (click)="scrollToSection(item.target)">{{ item.label }}</button>
-    <button class="drawer-login" (click)="login()">Connexion</button>
+    <button class="mobile-login-btn" (click)="login()">Connexion</button>
 </div>
+
+}
