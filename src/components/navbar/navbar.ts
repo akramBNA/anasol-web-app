@@ -1,37 +1,47 @@
-import { CommonModule } from '@angular/common';
-import { Component, HostListener } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+
+interface NavItem {
+  label: string;
+  target: string;
+}
 
 @Component({
   selector: 'app-navbar',
-  imports: [CommonModule],
   templateUrl: './navbar.html',
-  styleUrl: './navbar.css',
+  styleUrls: ['./navbar.css']
 })
 export class Navbar {
-  isScrolled = false;
+
+  mobileMenuOpen = false;
+
+  navItems: NavItem[] = [
+    { label: 'Qui sommes-nous', target: 'about' },
+    { label: 'Activités', target: 'activities' },
+    { label: 'Projets', target: 'projects' },
+    { label: 'Contactez-nous', target: 'contact' }
+  ];
 
   constructor(private router: Router) {}
 
-  navLinks = [
-    { label: 'Qui sommes nous', fragment: 'about' },
-    { label: 'Activités', fragment: 'activities' },
-    { label: 'Projets', fragment: 'projects' },
-    { label: 'Contactez nous', fragment: 'contact' },
-  ];
-
-  @HostListener('window:scroll')
-  onScroll(): void {
-    this.isScrolled = window.scrollY > 20;
+  toggleMenu(): void {
+    this.mobileMenuOpen = !this.mobileMenuOpen;
   }
 
-  scrollToSection(fragment: string): void {
-    const element = document.getElementById(fragment);
+  closeMenu(): void {
+    this.mobileMenuOpen = false;
+  }
 
-    if (element) {
-      element.scrollIntoView({
+  scrollToSection(sectionId: string): void {
+
+    this.closeMenu();
+
+    const section = document.getElementById(sectionId);
+
+    if(section){
+      section.scrollIntoView({
         behavior: 'smooth',
-        block: 'start',
+        block: 'start'
       });
     }
   }
