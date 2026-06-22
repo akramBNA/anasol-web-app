@@ -1,6 +1,8 @@
 <nav class="navbar">
     <div class="navbar-container">
-        <div class="navbar-logo">LOGO</div>
+        <div class="navbar-logo">
+            <img style="height: 40px; width: auto; border-radius: 10%;" src="assets/anasol-logo.png" alt="Logo ANASOL">
+        </div>
         <div class="navbar-links">
             <button *ngFor="let item of navItems" (click)="scrollToSection(item.target)">{{ item.label }}</button>
         </div>
