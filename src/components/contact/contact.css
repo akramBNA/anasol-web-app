@@ -1,7 +1,7 @@
 .contact-section {
   min-height: calc(100vh - 80px);
 
-  padding: 30px 8%;
+  padding: 15px 8%;
 
   background-color: #ffffff;
 
@@ -15,7 +15,7 @@
 .section-header {
   text-align: center;
 
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 }
 
 .section-header h2 {
@@ -61,7 +61,7 @@
 .map-container {
   flex: 1;
 
-  min-height: 380px;
+  min-height: 280px;
 
   border-radius: 16px;
 
@@ -83,7 +83,7 @@
 
   background-color: #d0e7e6;
 
-  padding: 20px;
+  padding: 14px;
 
   border-radius: 16px;
 
@@ -110,6 +110,12 @@ mat-form-field {
   width: 100%;
 }
 
+::ng-deep .mat-mdc-form-field-infix {
+  min-height: 40px !important;
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+}
+
 button[type='submit'] {
   height: 46px;
 
@@ -131,17 +137,17 @@ button[type='submit'] {
 
   border-radius: 12px;
 
-  padding: 12px 16px;
+  min-height: 60px;
 
-  min-height: 90px;
+  padding: 10px 14px;
+
+  gap: 8px;
 
   display: flex;
 
   align-items: center;
 
   justify-content: center;
-
-  gap: 12px;
 
   text-align: left;
 
@@ -159,11 +165,10 @@ button[type='submit'] {
 .info-card mat-icon {
   color: #293681;
 
-  font-size: 28px;
+  font-size: 22px;
 
-  width: 28px;
-
-  height: 28px;
+  width: 22px;
+  height: 22px;
 
   flex-shrink: 0;
 }
@@ -179,7 +184,7 @@ button[type='submit'] {
 .info-card p {
   margin: 0;
 
-  font-size: 0.85rem;
+  font-size: 0.8rem;
 
   color: #555;
 }
