@@ -21,6 +21,7 @@ export class Navbar {
     { label: 'Qui sommes-nous', target: 'about' },
     { label: 'Activités', target: 'activities' },
     { label: 'Projets', target: 'projects' },
+    { label: 'Témoignages', target: 'testimonials' },
     { label: 'Contactez-nous', target: 'contact' },
   ];
 
