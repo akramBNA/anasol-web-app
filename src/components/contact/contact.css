@@ -1,6 +1,5 @@
 .contact-section {
-  min-height: calc(100vh - 80px);
-
+  min-height: 100vh;
   padding: 15px 8%;
 
   background-color: #ffffff;
