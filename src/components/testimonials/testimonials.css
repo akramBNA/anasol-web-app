@@ -1,0 +1,195 @@
+.testimonials-section {
+  min-height: calc(100vh - 80px);
+
+  padding: 50px 8%;
+
+  background-color: #d0e7e6;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+.section-header {
+  text-align: center;
+
+  margin-bottom: 40px;
+}
+
+.section-header h2 {
+  color: #293681;
+
+  font-size: 2.5rem;
+
+  margin-bottom: 15px;
+}
+
+.section-divider {
+  width: 100px;
+
+  height: 4px;
+
+  margin: auto;
+
+  margin-bottom: 20px;
+
+  border-radius: 10px;
+
+  background-color: #4274d9;
+}
+
+.section-header p {
+  max-width: 750px;
+
+  margin: auto;
+
+  color: #555;
+
+  line-height: 1.8;
+}
+
+.testimonial-carousel {
+  width: 100%;
+
+  overflow: hidden;
+}
+
+.testimonial-track {
+  display: flex;
+
+  gap: 20px;
+
+  width: max-content;
+
+  animation: scrollTestimonials 30s linear infinite;
+}
+
+.testimonial-track:hover {
+  animation-play-state: paused;
+}
+
+.testimonial-card {
+  width: 320px;
+
+  min-height: 260px;
+
+  background-color: white;
+
+  border-radius: 18px;
+
+  padding: 25px;
+
+  text-align: center;
+
+  border-top: 5px solid #4274d9;
+
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+
+  transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-6px);
+
+  box-shadow: 0 12px 25px rgba(41, 54, 129, 0.15);
+}
+
+.testimonial-avatar {
+  width: 70px;
+
+  height: 70px;
+
+  margin: 0 auto 15px;
+
+  border-radius: 50%;
+
+  background: linear-gradient(135deg, #293681, #4274d9);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: white;
+
+  font-size: 1.15rem;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  box-shadow: 0 5px 15px rgba(41, 54, 129, 0.25);
+}
+
+.testimonial-card h4 {
+  color: #293681;
+
+  margin-bottom: 5px;
+}
+
+.company {
+  display: block;
+
+  color: #666;
+
+  font-size: 0.9rem;
+
+  margin-bottom: 12px;
+}
+
+.rating {
+  color: #f4b400;
+
+  font-size: 1.1rem;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 15px;
+}
+
+.quote {
+  color: #444;
+
+  line-height: 1.6;
+
+  font-style: italic;
+
+  font-size: 0.95rem;
+}
+
+@keyframes scrollTestimonials {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 992px) {
+  .testimonial-card {
+    width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials-section {
+    padding: 40px 6%;
+  }
+
+  .section-header h2 {
+    font-size: 2rem;
+  }
+
+  .testimonial-card {
+    width: 260px;
+
+    min-height: 250px;
+  }
+}
