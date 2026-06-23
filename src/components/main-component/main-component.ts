@@ -7,10 +7,11 @@ import { Projects } from '../projects/projects';
 import { Testimonials } from '../testimonials/testimonials';
 import { Contact } from '../contact/contact';
 import { Footer } from '../footer/footer';
+import { ScrollToTop } from '../scroll-to-top/scroll-to-top';
 
 @Component({
   selector: 'app-main-component',
-  imports: [CommonModule, Navbar, WhoAreWe, Activities, Projects, Testimonials, Contact, Footer],
+  imports: [CommonModule, Navbar, WhoAreWe, Activities, Projects, Testimonials, Contact, Footer, ScrollToTop],
   templateUrl: './main-component.html',
   styleUrl: './main-component.css',
 })
