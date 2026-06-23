@@ -6,10 +6,11 @@ import { Activities } from '../activities/activities';
 import { Projects } from '../projects/projects';
 import { Testimonials } from '../testimonials/testimonials';
 import { Contact } from '../contact/contact';
+import { Footer } from '../footer/footer';
 
 @Component({
   selector: 'app-main-component',
-  imports: [CommonModule, Navbar, WhoAreWe, Activities, Projects, Testimonials, Contact],
+  imports: [CommonModule, Navbar, WhoAreWe, Activities, Projects, Testimonials, Contact, Footer],
   templateUrl: './main-component.html',
   styleUrl: './main-component.css',
 })
