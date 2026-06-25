@@ -49,6 +49,6 @@ export class Navbar {
   }
 
   login(): void {
-    this.router.navigate(['/login']);
+    this.router.navigate(['/unavailable']);
   }
 }

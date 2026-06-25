@@ -1,21 +1,43 @@
 <nav class="navbar">
+
     <div class="navbar-container">
+
         <div class="navbar-logo">
-            <img style="height: 40px; width: auto; border-radius: 10%;" src="assets/anasol-logo.png" alt="Logo ANASOL">
+            <img src="assets/anasol-logo.png" alt="Logo ANASOL" class="logo-image">
         </div>
+
         <div class="navbar-links">
-            <button *ngFor="let item of navItems" (click)="scrollToSection(item.target)">{{ item.label }}</button>
+            <button *ngFor="let item of navItems" (click)="scrollToSection(item.target)">
+                {{ item.label }}
+            </button>
         </div>
-        <button class="login-btn" (click)="login()">Connexion</button>
-        <button class="hamburger-btn" (click)="toggleMenu()">☰</button>
+
+        <button class="login-btn" (click)="login()">
+            Connexion
+        </button>
+
+        <button class="hamburger-btn" (click)="toggleMenu()">
+            ☰
+        </button>
+
     </div>
+
 </nav>
 
-@if(mobileMenuOpen){
+@if (mobileMenuOpen) {
+
+<div class="mobile-overlay" (click)="closeMenu()"></div>
 
 <div class="mobile-drawer">
-    <button *ngFor="let item of navItems" (click)="scrollToSection(item.target)">{{ item.label }}</button>
-    <button class="mobile-login-btn" (click)="login()">Connexion</button>
+
+    <button *ngFor="let item of navItems" (click)="scrollToSection(item.target)">
+        {{ item.label }}
+    </button>
+
+    <button class="mobile-login-btn" (click)="login()">
+        Connexion
+    </button>
+
 </div>
 
 }
