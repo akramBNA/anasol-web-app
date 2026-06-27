@@ -9,6 +9,7 @@
   flex-direction: column;
 
   justify-content: center;
+  scroll-margin-top: 25px;
 }
 
 .section-header {
