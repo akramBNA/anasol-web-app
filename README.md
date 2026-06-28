@@ -49,7 +49,8 @@ The application has been designed with a clean, modern interface while remaining
 ```text
 src/
 │
-├── app/
+├──app/
+├──components/
 │   ├── navbar/
 │   ├── hero/
 │   ├── who-are-we/
@@ -59,7 +60,8 @@ src/
 │   ├── contact/
 │   ├── footer/
 │   ├── scroll-top/
-│   └── unavailable/
+│   ├── main-component/
+|   └──default-redirect
 │
 ├── assets/
 └── styles.css
@@ -72,7 +74,7 @@ src/
 Clone the repository
 
 ```bash
-git clone https://github.com/<your-username>/anasol-web-app.git
+git clone https://github.com/akramBNA/anasol-web-app.git
 ```
 
 Install dependencies
